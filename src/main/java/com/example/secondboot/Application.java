@@ -20,6 +20,7 @@ public class Application implements CommandLineRunner {
         SpringApplication.run(Application.class, args);
     }
 
+    // database to be initialized
     public void setDataSource(DataSource ds) {
         this.dataSource=ds;
         /*dataSource.setDriverClassName("org.apache.derby.jdbc.EmbeddedDriver");
@@ -32,13 +33,6 @@ public class Application implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-       String sql = "INSERT INTO member (firstName, lastName, city) VALUES ("
-                + "'Nicole', 'Hafner', 'Bochum')";
-
-       // int rows = jdbcTemplate.update(sql);
-        /*if (rows > 0) {
-            System.out.println("A new row has been inserted.");
-        }*/
     }
 
     @Bean
